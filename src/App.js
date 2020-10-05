@@ -9,6 +9,11 @@ function App() {
     <>
       <Router>
         <Switch>
+          {/*<Route path="/5" component={} />
+          <Route path="/4" component={} />
+          <Route path="/3" component={} />
+          <Route path="/2" component={} />
+          <Route path="/1" component={} />*/}
           <Route path="/" component={Home} />
         </Switch>
       </Router>

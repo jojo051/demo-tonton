@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Sakra';
+  src: url(../font/Sakra\ Regular.ttf);
+}
+
+body {
+  background-color: rgb(17, 160, 154);
+}
