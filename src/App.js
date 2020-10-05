@@ -1,16 +1,18 @@
 import React from 'react';
-import './App.css';
 
-import questions from '../src/data/questions';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Home from './component/Home';
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <h1>Data dans la console: </h1>
-        {console.log(questions)}
-      </div>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route path="/" component={Home} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
