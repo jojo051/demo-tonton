@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import QuestionImgDrag from './QuestionImgDrag';
 import QuestionPhrase from './QuestionPhrase';
 import QuestionQCM from './QuestionQCM';
 import QuetionListDrag from './QuetionListDrag';
@@ -12,6 +13,7 @@ function Home() {
         <QuestionPhrase />
         <QuestionQCM />
         <QuetionListDrag />
+        <QuestionImgDrag />
       </div>
     </>
   );

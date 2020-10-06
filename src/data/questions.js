@@ -1,3 +1,5 @@
+import bouche300x300 from '../img/bouche300x300.png';
+
 const questions = [
   {
     id: 1,
@@ -146,6 +148,18 @@ const questions = [
       { number: "4", bottle: "Double Magnum" },
       { number: "1", bottle: "Melchior" },
     ],
+  },
+  {
+    id:7,
+    title: "Remetre les images avec les bons intitulés",
+    item: [
+      { logo: "bouche", img: "bouche300x300"},
+
+    
+    ],
+    goodItem:[
+
+    ]
   },
 ];
 
