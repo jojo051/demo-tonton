@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import questions from '../data/questions';
 
-const items = [
-  { number: "1", title: "Melchior"},
-  { number: "2", title: "Magnum"},
-  { number: "3", title: "Fillettte"},
-  { number: "4", title: "Double Magnum"},
-  { number: "5", title: "Bordelaise"},
-  ]
+const items =  questions[5].item
+const goodItems = questions[5].goodItem
    
 const initialDnDState = {
   draggedFrom: null,
@@ -16,11 +12,11 @@ const initialDnDState = {
   updatedOrder: []
 }
    //debut du composant
-  const DragToReorderList = () => {
+  const QuetionListDrag = () => {
     
     const [list, setList] = useState(items);
     const [dragAndDrop, setDragAndDrop] = useState(initialDnDState);
-    
+    const [checkResponse, setCheckResponse] = useState( "Et la reponse est:")
     
     // onDragStart fires when an element
     // starts being dragged
@@ -74,14 +70,11 @@ const initialDnDState = {
        updatedOrder: newList,
        draggedTo: draggedTo
       })
-     }
-   
+     } 
     }
     
-    const onDrop = (event) => {
-     
-    setList(dragAndDrop.updatedOrder);
-     
+    const onDrop = (event) => {    
+    setList(dragAndDrop.updatedOrder);    
       setDragAndDrop({
         ...dragAndDrop,
         draggedFrom: null,
@@ -99,9 +92,11 @@ const initialDnDState = {
      
     }*/
     
-    const onverrification =()=>{
-      if (items === list){
-        console.log('ok')
+    const checkResult =()=> {
+      if ( JSON.stringify(goodItems) === JSON.stringify(list)){
+        setCheckResponse("Bonne reponse!")
+      } else{
+        setCheckResponse("T null")
       }
     }
 
@@ -117,6 +112,7 @@ const initialDnDState = {
     
      return(
        <section>
+        <h2>{questions[5].title}</h2>
         <ul>        
           {list.map( (item, index) => {
             return(
@@ -134,15 +130,16 @@ const initialDnDState = {
                 
                 className={dragAndDrop && dragAndDrop.draggedTo=== Number(index) ? "dropArea" : ""}
                 >
-                <p>{item.number} . {item.title}</p>
+                <p>{item.number} . {item.bottle}</p>
                 <i class="fas fa-arrows-alt-v"></i>
               </li>
             )
           })}        
         </ul>
-        <button type="button" onClick={onverrification()}>ok</button>
+        <p> {checkResponse} </p>
+        <button type="button" onClick={ ()=>checkResult() }>ok</button>
        </section>
        )
    };
    
-export default DragToReorderList;
+export default QuetionListDrag;

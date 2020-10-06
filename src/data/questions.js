@@ -129,6 +129,24 @@ const questions = [
       },
     ],
   },
+  {
+    id:6,
+    title: "Trier les bouteille de la plus petite a la plus grande",
+    item: [
+      { number: "1", bottle: "Melchior"},
+      { number: "2", bottle: "Magnum"},
+      { number: "3", bottle: "Fillette"},
+      { number: "4", bottle: "Double Magnum"},
+      { number: "5", bottle: "Bordelaise"},
+    ],
+    goodItem: [
+      { number: "3", bottle: "Fillette" },
+      { number: "5", bottle: "Bordelaise" },
+      { number: "2", bottle: "Magnum" },
+      { number: "4", bottle: "Double Magnum" },
+      { number: "1", bottle: "Melchior" },
+    ],
+  },
 ];
 
 export default questions;
