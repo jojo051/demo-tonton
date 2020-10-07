@@ -37,3 +37,7 @@ amplifyconfiguration.json
 amplify-build-config.json
 amplify-gradle-config.json
 amplifytools.xcconfig
+
+#deploy
+/amplify
+/src/aws-exports.js
