@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import questions from '../data/questions';
-import bouche300x300 from '../img/bouche300x300.png';
 
 const items = questions[6].item
+const goodItems = questions[6].goodItem
+
 const initialDnDState = {
   draggedFrom: null,
   draggedTo: null,
@@ -109,14 +110,52 @@ const QuestionImgDrag =()=> {
   }, [list])
   
    return(
-     <section>
+     <section className="">
        <h2>{questions[6].title}</h2>
       <p> {checkResponse} </p>
-   {items.map((item)=> 
-   <div> 
-     <p>{item.logo}</p> 
-     <img src= {bouche300x300} />
-    </div> )}
+      <div className="block">
+        <div className="blockLeft"> 
+          <ul className="">        
+            {list.map( (item, index) => {
+              return(
+                <li
+                  key={index}
+                  
+                  data-position={index}
+                  draggable
+                  
+                  onDragStart={onDragStart}
+                  onDragOver={onDragOver}
+                  onDrop={onDrop}
+                  
+                  //onDragLeave={onDragLeave}
+                  
+                  className={dragAndDrop && dragAndDrop.draggedTo=== Number(index) ? "dropArea" : ""}
+                  >
+                  <img className="" src= {item.logo} />
+                  <i class="fas fa-arrows-alt-v"></i>
+                </li>
+              )
+            })}        
+          </ul>
+        </div>
+        <div className="blockRight">
+          <ul>
+          {goodItems.map( (goodItem, index) => {
+              return(
+                <li>  
+                  <p className=""> {goodItem.name} </p>
+                  <i class="fas fa-arrows-alt-v"></i>
+                </li>
+              )
+            })}
+          </ul>
+          <p onDragOver={onDragOver} onDrop={onDrop}></p>
+          <p onDrop={onDrop}></p>
+          <p onDrop={onDrop}></p>
+          <p onDrop={onDrop}></p>
+        </div>
+      </div>
       {/*<button type="button" onClick={ ()=>checkResult() }>ok</button>*/}
      </section>
      )

@@ -1,4 +1,8 @@
 import bouche300x300 from '../img/bouche300x300.png';
+import cartes300x300 from '../img/cartes300x300.png';
+import nez300x300 from '../img/nez300x300.png';
+import oeil300x300 from '../img/oeil300x300.png';
+
 
 const questions = [
   {
@@ -153,12 +157,24 @@ const questions = [
     id:7,
     title: "Remetre les images avec les bons intitulés",
     item: [
-      { logo: "bouche", img: "bouche300x300"},
-
-    
+      { name: "bouche", logo: bouche300x300 },
+      { name: "cartes", logo: cartes300x300 },
+      { name: "nez", logo: nez300x300 },
+      { name: "oeil", logo: oeil300x300 },
+      { name: "", logo: "" },
+      { name: "", logo: "" },
+      { name: "", logo: "" },
+      { name: "", logo: "" },
     ],
-    goodItem:[
-
+    goodItem: [
+      { name: "nez", logo: nez300x300 },
+      { name: "oeil", logo: oeil300x300 },
+      { name: "bouche", logo: bouche300x300 },
+      { name: "cartes", logo: cartes300x300 },
+      { name: "", logo: "" },
+      { name: "", logo: "" },
+      { name: "", logo: "" },
+      { name: "", logo: "" },
     ]
   },
 ];
