@@ -3,6 +3,10 @@ import cartes300x300 from '../img/cartes300x300.png';
 import nez300x300 from '../img/nez300x300.png';
 import oeil300x300 from '../img/oeil300x300.png';
 
+import vin1 from '../img/vin1.jpg';
+import vin2 from '../img/vin2.jpg';
+import vin3 from '../img/vin3.jpg';
+import vin4 from '../img/vin4.jpg';
 
 const questions = [
   {
@@ -136,46 +140,62 @@ const questions = [
     ],
   },
   {
-    id:6,
-    title: "Trier les bouteille de la plus petite a la plus grande",
+    id: 6,
+    title: 'Trier les bouteille de la plus petite a la plus grande',
     item: [
-      { number: "1", bottle: "Melchior"},
-      { number: "2", bottle: "Magnum"},
-      { number: "3", bottle: "Fillette"},
-      { number: "4", bottle: "Double Magnum"},
-      { number: "5", bottle: "Bordelaise"},
+      { number: '1', bottle: 'Melchior' },
+      { number: '2', bottle: 'Magnum' },
+      { number: '3', bottle: 'Fillette' },
+      { number: '4', bottle: 'Double Magnum' },
+      { number: '5', bottle: 'Bordelaise' },
     ],
     goodItem: [
-      { number: "3", bottle: "Fillette" },
-      { number: "5", bottle: "Bordelaise" },
-      { number: "2", bottle: "Magnum" },
-      { number: "4", bottle: "Double Magnum" },
-      { number: "1", bottle: "Melchior" },
+      { number: '3', bottle: 'Fillette' },
+      { number: '5', bottle: 'Bordelaise' },
+      { number: '2', bottle: 'Magnum' },
+      { number: '4', bottle: 'Double Magnum' },
+      { number: '1', bottle: 'Melchior' },
     ],
   },
   {
-    id:7,
-    title: "Remetre les images avec les bons intitulés",
+    id: 7,
+    title: 'Remetre les images avec les bons intitulés',
     item: [
-      { name: "bouche", logo: bouche300x300 },
-      { name: "cartes", logo: cartes300x300 },
-      { name: "nez", logo: nez300x300 },
-      { name: "oeil", logo: oeil300x300 },
-      { name: "", logo: "" },
-      { name: "", logo: "" },
-      { name: "", logo: "" },
-      { name: "", logo: "" },
+      { name: 'bouche', logo: bouche300x300 },
+      { name: 'cartes', logo: cartes300x300 },
+      { name: 'nez', logo: nez300x300 },
+      { name: 'oeil', logo: oeil300x300 },
+      { name: '', logo: '' },
+      { name: '', logo: '' },
+      { name: '', logo: '' },
+      { name: '', logo: '' },
     ],
     goodItem: [
-      { name: "nez", logo: nez300x300 },
-      { name: "oeil", logo: oeil300x300 },
-      { name: "bouche", logo: bouche300x300 },
-      { name: "cartes", logo: cartes300x300 },
-      { name: "", logo: "" },
-      { name: "", logo: "" },
-      { name: "", logo: "" },
-      { name: "", logo: "" },
-    ]
+      { name: 'nez', logo: nez300x300 },
+      { name: 'oeil', logo: oeil300x300 },
+      { name: 'bouche', logo: bouche300x300 },
+      { name: 'cartes', logo: cartes300x300 },
+      { name: '', logo: '' },
+      { name: '', logo: '' },
+      { name: '', logo: '' },
+      { name: '', logo: '' },
+    ],
+  },
+  {
+    id: 8,
+    title: 'Placez ces images dans le bon ordre.',
+    items: [
+      { id: 1, img: vin3 },
+      { id: 2, img: vin1 },
+      { id: 3, img: vin2 },
+      { id: 4, img: vin4 },
+    ],
+    goodItems: [
+      { id: 2, img: vin1 },
+      { id: 3, img: vin2 },
+      { id: 1, img: vin3 },
+      { id: 4, img: vin4 },
+    ],
   },
 ];
 
