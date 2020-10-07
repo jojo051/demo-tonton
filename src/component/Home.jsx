@@ -1,9 +1,10 @@
 import React from 'react';
-import './Home.css';
+import AppDragDropDemo from './AppDragDropDemo';
 import QuestionImgDrag from './QuestionImgDrag';
 import QuestionPhrase from './QuestionPhrase';
 import QuestionQCM from './QuestionQCM';
 import QuetionListDrag from './QuetionListDrag';
+import './Home.css';
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
         <QuestionQCM />
         <QuetionListDrag />
         <QuestionImgDrag />
+        <AppDragDropDemo />
       </div>
     </>
   );
