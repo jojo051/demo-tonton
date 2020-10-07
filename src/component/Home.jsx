@@ -17,7 +17,7 @@ function Home() {
         <h1>Bienvenue chez tonton Sommelier</h1>
         </div>
         <div className="home-button-container" >
-        <Link className="home-button" to="/">Jouer</Link>
+        <Link className="home-button" to="/1">Jouer</Link>
         </div>
       </div>
     </>

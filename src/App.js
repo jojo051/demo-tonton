@@ -13,12 +13,9 @@ function App() {
           {/*<Route path="/5" component={} />
           <Route path="/4" component={} />
           <Route path="/3" component={} />
-          <Route path="/2" component={} />*/}
-<<<<<<< HEAD
-          <Route path="/questionphrase" component={QuestionPhrase} />
-=======
+          <Route path="/2" component={} />
+          <Route path="/questionphrase" component={QuestionPhrase} />*/}
           <Route path="/1" component={Example} />
->>>>>>> brian/css
           <Route path="/" component={Home} />
         </Switch>
       </Router>
