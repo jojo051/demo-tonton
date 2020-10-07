@@ -2,7 +2,43 @@
   font-family: 'Sakra';
   src: url(../font/Sakra\ Regular.ttf);
 }
+body{
+  background-color: #eceff1;
+}
 
-body {
-  background-color: rgb(17, 160, 154);
+.home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.home-title{
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 20vh;
+  font-family: 'Sakra' ;
+}
+
+.home-button {
+  text-align: center;
+  font-family: 'Sakra' ;
+  background-color: #00A19A;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:white ;
+  border-radius: 20px;
+  font-weight: 900;
+  font-size: x-large;
+}
+
+.home-button-container a {
+  padding: 0.5rem 1rem  ;
+  text-align: center;
+  
+}
+
+.home-button-container {
+  display: flex;
+  justify-content: center;
 }
