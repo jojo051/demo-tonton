@@ -4,6 +4,7 @@ import QuestionImgDrag from './QuestionImgDrag';
 import QuestionPhrase from './QuestionPhrase';
 import QuestionQCM from './QuestionQCM';
 import QuetionListDrag from './QuetionListDrag';
+import QuestionListDragImage from './QuestionListDragImage';
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
         <QuestionQCM />
         <QuetionListDrag />
         <QuestionImgDrag />
+        <QuestionListDragImage />
       </div>
     </>
   );
