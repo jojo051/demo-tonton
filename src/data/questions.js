@@ -1,8 +1,6 @@
 import bouche300x300 from '../img/bouche300x300.png';
-import cartes300x300 from '../img/cartes300x300.png';
 import nez300x300 from '../img/nez300x300.png';
 import oeil300x300 from '../img/oeil300x300.png';
-
 import vin1 from '../img/vin1.jpg';
 import vin2 from '../img/vin2.jpg';
 import vin3 from '../img/vin3.jpg';
@@ -158,27 +156,17 @@ const questions = [
     ],
   },
   {
-    id: 7,
-    title: 'Remetre les images avec les bons intitulés',
+    id:7,
+    title: "Faire corespondre les titre et leurs images",
     item: [
-      { name: 'bouche', logo: bouche300x300 },
-      { name: 'cartes', logo: cartes300x300 },
-      { name: 'nez', logo: nez300x300 },
-      { name: 'oeil', logo: oeil300x300 },
-      { name: '', logo: '' },
-      { name: '', logo: '' },
-      { name: '', logo: '' },
-      { name: '', logo: '' },
+      { name: "bouche", logo: bouche300x300 },
+      { name: "nez", logo: nez300x300 },
+      { name: "oeil", logo: oeil300x300 },
     ],
     goodItem: [
-      { name: 'nez', logo: nez300x300 },
-      { name: 'oeil', logo: oeil300x300 },
-      { name: 'bouche', logo: bouche300x300 },
-      { name: 'cartes', logo: cartes300x300 },
-      { name: '', logo: '' },
-      { name: '', logo: '' },
-      { name: '', logo: '' },
-      { name: '', logo: '' },
+      { name: "nez", logo: nez300x300 },
+      { name: "oeil", logo: oeil300x300 },
+      { name: "bouche", logo: bouche300x300 },
     ],
   },
   {
@@ -196,7 +184,7 @@ const questions = [
       { id: 1, img: vin3 },
       { id: 4, img: vin4 },
     ],
-  },
+  }  
 ];
 
 export default questions;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import questions from '../data/questions';
+import './QuestionImgDrag.css';
 
 const items = questions[6].item
 const goodItems = questions[6].goodItem
@@ -91,13 +92,13 @@ const QuestionImgDrag =()=> {
    
   }*/
   //verification of result
-  /*const checkResult =()=> {
+  const checkResult =()=> {
     if ( JSON.stringify(goodItems) === JSON.stringify(list)){
       setCheckResponse("Bonne reponse!")
     } else{
       setCheckResponse("T null")
     }
-  }*/
+  }
 
   // Not needed, just for logging purposes:
   useEffect( ()=>{
@@ -114,7 +115,7 @@ const QuestionImgDrag =()=> {
        <h2>{questions[6].title}</h2>
       <p> {checkResponse} </p>
       <div className="block">
-        <div className="blockLeft"> 
+        <div className="blockUp"> 
           <ul className="">        
             {list.map( (item, index) => {
               return(
@@ -130,33 +131,28 @@ const QuestionImgDrag =()=> {
                   
                   //onDragLeave={onDragLeave}
                   
-                  className={dragAndDrop && dragAndDrop.draggedTo=== Number(index) ? "dropArea" : ""}
+                  className={dragAndDrop && dragAndDrop.draggedTo=== Number(index) ? "hvr-buzz " : "" }
                   >
-                  <img className="" src= {item.logo} />
-                  <i class="fas fa-arrows-alt-v"></i>
+                  <img className="" src= {item.logo} alt={item.name} />
                 </li>
               )
             })}        
           </ul>
         </div>
-        <div className="blockRight">
-          <ul>
+        <div className="blockdown">
+          <ul className="">
           {goodItems.map( (goodItem, index) => {
               return(
-                <li>  
+                <li className="">  
                   <p className=""> {goodItem.name} </p>
-                  <i class="fas fa-arrows-alt-v"></i>
                 </li>
               )
             })}
           </ul>
-          <p onDragOver={onDragOver} onDrop={onDrop}></p>
-          <p onDrop={onDrop}></p>
-          <p onDrop={onDrop}></p>
-          <p onDrop={onDrop}></p>
+
         </div>
       </div>
-      {/*<button type="button" onClick={ ()=>checkResult() }>ok</button>*/}
+      <button type="button" onClick={ ()=>checkResult() }>ok</button>
      </section>
      )
 };
