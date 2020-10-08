@@ -1,12 +1,12 @@
 import React from 'react';
-import './Example.css';
+import './QCM.css';
 
 import Counter from './Counter';
 
 import questions from '../data/questions';
 import img from '../img/noun_grapes_3070556.png';
 
-function Example() {
+function QCM() {
   return (
     <>
       <Counter />
@@ -26,4 +26,4 @@ function Example() {
   );
 }
 
-export default Example;
+export default QCM;
