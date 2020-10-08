@@ -35,7 +35,6 @@ const QuestionSelect =()=> {
   
   const onCkeckResult = () => {
     if (JSON.stringify(imputResult) === JSON.stringify(goodresult)){
-    //setCheck("bienjouer!")}
     history.push("/3")}
     else {
       setCheck("t null!")

@@ -32,6 +32,7 @@ function QCM() {
   const checkResult = () => {
     if (checkbox1 === true && checkbox2 === true && checkbox4 === true) {
       setResult(true);
+      history.push("/2")
       console.log('good :)');
     } else {
       console.log('not good :(');
