@@ -30,6 +30,7 @@ body{
   border-radius: 20px;
   font-weight: 900;
   font-size: x-large;
+  box-shadow: 1px 2px 5px black;
 }
 
 .home-button-container a {
