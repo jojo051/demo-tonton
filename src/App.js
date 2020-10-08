@@ -3,7 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import QuestionPhrase from './component/QuestionPhrase'
 import Home from './component/Home';
-import Example from './component/Example';
+import QCM from './component/QCM';
+import questionSelect from './component/QuestionSelect';
 
 function App() {
   return (
@@ -11,11 +12,10 @@ function App() {
       <Router>
         <Switch>
           {/*<Route path="/5" component={} />
-          <Route path="/4" component={} />
-          <Route path="/3" component={} />
-          <Route path="/2" component={} />
-          <Route path="/questionphrase" component={QuestionPhrase} />*/}
-          <Route path="/1" component={Example} />
+          <Route path="/4" component={} />*/}
+          <Route path="/3" component={QuestionPhrase} />
+          <Route path="/2" component={questionSelect} />
+          <Route path="/1" component={QCM} />
           <Route path="/" component={Home} />
         </Switch>
       </Router>
