@@ -1,19 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
-  Link,
   useHistory,
-  useParams,
 } from 'react-router-dom';
-import BorderTopHome from './BorderTopHome'
+import BorderTopHome from './BorderTopHome';
+import CounterQuestionSelect from './CounterQuestionSelect';
+import './QuestionSelect.css'
 const QuestionSelect =()=> {
 
   const [regionAr, setRegionAr] = useState("");
   const [regionMa, setRegionMa] = useState("");
   const [regionAu, setRegionAu] = useState("");
   const [regionHa, setRegionHa] = useState("");
-  const [check, setCheck] = useState("est le reponse est");
 
-  const { questionId } = useParams();
   const history = useHistory();
 
   const imputResult =  
@@ -32,23 +30,25 @@ const QuestionSelect =()=> {
     region4: "haute marne",
     }]
 
-  
+  //debut composants
   const onCkeckResult = () => {
     if (JSON.stringify(imputResult) === JSON.stringify(goodresult)){
     history.push("/3")}
-    else {
-      setCheck("t null!")
-    }
+    
   }
+  
 
   return(
-    <div clasName="">
+    <div clasName="question-select-container">
       <BorderTopHome />
-      <h2>Hello from Question Select</h2>
+      <CounterQuestionSelect />
 
-      <p>Metre les bonne region au bonne endroi.</p>
-      <div className="">
-        <label htmlFor="region-select-ar" clasName="">Quelle est cette region:</label>
+      <h2 className="question-select-title">Hello from Question Select</h2>
+
+      <p className="question-select-question">Metre les departements aux bons endrois</p>
+      <div className="seclect-container"> 
+        <div className="container1">
+          <label htmlFor="region-select-ar" clasName="question-label1">Quelle est cette region:</label>
           <select 
             clasName=""
             value={regionAr}
@@ -61,8 +61,9 @@ const QuestionSelect =()=> {
             <option value="marne">marne</option>
             <option value="aube">aube</option>   
           </select> 
-
-          <label htmlFor="region-select-ma" clasName="">Quelle est cette region:</label>
+        </div>
+        <div className="container2">
+          <label htmlFor="region-select-ma" clasName="question-label2">Quelle est cette region:</label>
           <select 
             clasName=""
             value={regionMa}
@@ -75,8 +76,9 @@ const QuestionSelect =()=> {
             <option value="aube">aube</option>
             <option value="haute marne">haute marne</option>
           </select>
-
-          <label htmlFor="region-select-au" clasName="">Quelle est cette region:</label>
+        </div> 
+        <div className="container3">
+          <label htmlFor="region-select-au" clasName="question-label3">Quelle est cette region:</label>
           <select 
             clasName=""
             value={regionAu}
@@ -89,8 +91,9 @@ const QuestionSelect =()=> {
             <option value="marne">marne</option>
             <option value="aube">aube</option>
           </select>
-
-          <label htmlFor="region-select-ha" clasName="">Quelle est cette region:</label>
+        </div>
+        <div className="container4">
+          <label htmlFor="region-select-ha" clasName="question-label4">Quelle est cette region:</label>
           <select 
             clasName=""
             value={regionHa}
@@ -103,9 +106,11 @@ const QuestionSelect =()=> {
             <option value="aube">aube</option>
             <option value="haute marne">haute marne</option>
           </select>
+        </div>
       </div>
-      <button className="" type="button" onClick={() => onCkeckResult()}  >ok</button>
-      {check}
+        <div className="question-select-button-container">
+          <button className="question-select-button" type="button" onClick={() => onCkeckResult()} >validation</button>
+        </div>
     </div>
   )
 }
