@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import './Counter.css';
 
-function Counter(props) {
+function Counter() {
   const MAX_DURATION = 30;
   const [timeleft, setTimeleft] = useState(MAX_DURATION);
   const history = useHistory();
-  const params = useParams();
 
   useEffect(() => {
     if (timeleft > 0) {
       setTimeout(() => setTimeleft(timeleft - 1), 1000);
     } else {
-      history.push('/');
+      history.push('/2');
     }
   }, [timeleft, history]);
   return (

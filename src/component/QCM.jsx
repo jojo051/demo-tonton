@@ -4,6 +4,7 @@ import Counter from './Counter';
 import questions from '../data/questions';
 import img from '../img/noun_grapes_3070556.png';
 import { useHistory } from 'react-router-dom';
+import BorderTopHome from './BorderTopHome';
 
 function QCM() {
   const [checkbox1, setCheckbox1] = useState(false);
@@ -32,7 +33,7 @@ function QCM() {
   const checkResult = () => {
     if (checkbox1 === true && checkbox2 === true && checkbox4 === true) {
       setResult(true);
-      history.push("/2")
+      history.push('/2');
       console.log('good :)');
     } else {
       console.log('not good :(');
@@ -41,6 +42,7 @@ function QCM() {
 
   return (
     <>
+      <BorderTopHome />
       <Counter />
       <div className="img-container">
         <img className="img-question" src={img} alt="image" />
@@ -126,20 +128,8 @@ function QCM() {
 
       <div className="buttons-container" style={{ display: 'flex' }}>
         <button className="check-result-button" onClick={checkResult}>
-          Vérifier mes résultats
+          Valider
         </button>
-        <div className="next-button">
-          {result && (
-            <div
-              className="next"
-              onClick={() => {
-                history.push('/');
-              }}
-            >
-              Suivant
-            </div>
-          )}
-        </div>
       </div>
     </>
   );

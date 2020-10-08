@@ -4,3 +4,72 @@
   border-bottom: 1px solid black;
 }
 */
+
+.input-phrase[type='text'] {
+  background-color: #eceff1;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+}
+
+.result-button {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #00a19a;
+  border: 1px solid #707070;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.title-container {
+  font-family: 'Sakra';
+  font-size: 1.5rem;
+  background-color: #00a19a;
+  color: white;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  margin: 0 1.5rem 1.5rem;
+}
+
+.question-phrase-container {
+  background-color: white;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0 1.8rem 1rem;
+  font-size: 25px;
+  text-align: center;
+}
+
+.counter {
+  border-radius: 0.5rem !important;
+  width: 78%;
+}
+
+progress[value] {
+  border: 1px solid #707070;
+}
+
+progress::-webkit-progress-bar {
+  background: white;
+  border-radius: 0.5rem;
+}
+
+progress[value]::-webkit-progress-value {
+  background: #59be80;
+  border-radius: 0.5rem;
+}
+
+progress[value]::-moz-progress-bar {
+  background: #59be80;
+  border-radius: 0.5rem;
+}
