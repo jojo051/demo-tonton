@@ -19,7 +19,6 @@ function Home() {
         <div className="home-button-container" >
         <Link className="home-button" to="/1">Jouer</Link>
         </div>
-        <p style={{textAlign:"center"}}>https://main.d3rj5i38r0uxgo.amplifyapp.com/</p>
       </div>
     </>
   );
