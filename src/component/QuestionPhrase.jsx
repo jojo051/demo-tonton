@@ -23,7 +23,7 @@ const [value2, setValue2] = useState('');*/}
 
 
 
-  const MAX_DURATION = 30;
+  const MAX_DURATION = 90;
   const [timeleft, setTimeleft] = useState(MAX_DURATION);
   const history = useHistory();
 

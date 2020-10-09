@@ -54,7 +54,8 @@ body {
 }
 
 .answer-input {
-  margin: 0 1rem 0 0;
+  margin: 0 121rem 0 0;
+  display: none;
 }
 
 .check-result-button {
