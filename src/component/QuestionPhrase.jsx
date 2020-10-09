@@ -4,12 +4,26 @@ import BorderTopHome from './BorderTopHome';
 import './QuestionPhrase.css';
 
 function QuestionPhrase() {
-  const [value1, setValue1] = useState('');
-  const [value2, setValue2] = useState('');
+{ /* const [value1, setValue1] = useState('');
+const [value2, setValue2] = useState('');*/}
   const [bool, setBool] = useState(false);
   const [words, setWords] = useState(['constituants', 'transformation']);
 
-  const MAX_DURATION = 90;
+  const [state, setState] = useState({
+    value1: '',
+    value2: ''
+  })
+
+  const handleChange = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value
+    })
+  }
+
+
+
+  const MAX_DURATION = 30;
   const [timeleft, setTimeleft] = useState(MAX_DURATION);
   const history = useHistory();
 
@@ -21,16 +35,16 @@ function QuestionPhrase() {
     }
   }, [timeleft, history]);
 
-  const handleChangeValue1 = (e) => {
+{/*  const handleChangeValue1 = (e) => {
     setValue1(e.target.value);
   };
 
   const handleChangeValue2 = (e) => {
     setValue2(e.target.value);
-  };
+  };*/}
 
   const checkResult = () => {
-    if (words[0] === value1 && words[1] === value2) {
+    if (words[0] === state.value1 && words[1] === state.value2) {
       setBool(true);
       history.push('/4');
     } else {
@@ -60,8 +74,8 @@ function QuestionPhrase() {
           className="input-phrase"
           type="text"
           name="value1"
-          value={value1}
-          onChange={handleChangeValue1}
+          value={state.value1.toLowerCase()}
+          onChange={handleChange}
           required
         />
         <div style={{ marginBottom: '1.5rem' }}>
@@ -72,8 +86,8 @@ function QuestionPhrase() {
           className="input-phrase"
           type="text"
           name="value2"
-          value={value2}
-          onChange={handleChangeValue2}
+          value={state.value2.toLowerCase()}
+          onChange={handleChange}
           required
         />
         <div>du raisin en vin, ainsi que la conservation du vin.</div>
