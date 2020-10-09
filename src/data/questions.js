@@ -191,12 +191,12 @@ const questions = [
     answers: [
       {
         id: 1,
-        title: 'Au moin ca',
+        title: 'Au moin ca!',
         value: false,
       },
       {
         id: 2,
-        title: 'Cest pas faux',
+        title: 'C\'est pas faux',
         value: false,
       },
       {
@@ -206,7 +206,7 @@ const questions = [
       },
       {
         id: 4,
-        title: 'Demande a Lucas',
+        title: 'Demande à Lucas',
         value: true,
       },
     ],
