@@ -184,7 +184,34 @@ const questions = [
       { id: 1, img: vin3 },
       { id: 4, img: vin4 },
     ],
-  }  
+  }, 
+  {
+    id: 9,
+    title: "Combien de vitamine contien un poivron?",
+    answers: [
+      {
+        id: 1,
+        title: 'Au moin ca',
+        value: false,
+      },
+      {
+        id: 2,
+        title: 'Cest pas faux',
+        value: false,
+      },
+      {
+        id: 3,
+        title: '42',
+        value: false,
+      },
+      {
+        id: 4,
+        title: 'Demande a Lucas',
+        value: true,
+      },
+    ],
+  },
 ];
+
 
 export default questions;
