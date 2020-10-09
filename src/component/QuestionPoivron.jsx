@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-import './QCM.css';
+import './QuestionPoivron.css';
 import questions from '../data/questions';
 import img from '../img/noun_grapes_3070556.png';
 import { useHistory } from 'react-router-dom';
@@ -14,7 +14,7 @@ function QuestionPoivron() {
   const history = useHistory();
   const MAX_DURATION = 30;
   const [timeleft, setTimeleft] = useState(MAX_DURATION);
-
+  const [pause, setPause ] = useState( false )
   const handleChangeCheckbox1 = () => {
     setCheckbox1(!checkbox1);
   };
@@ -41,20 +41,19 @@ function QuestionPoivron() {
     }
   };
 
-  useEffect(() => {
-    if (timeleft > 0) {
+  
+    const timer =()=> {
+    if (timeleft > 0 && pause === false) {
       setTimeout(() => setTimeleft(timeleft - 1), 1000);
-    } else {
-      history.push('/');
     }
-  }, [timeleft, history]);
+  }
+  timer()
 
   return (
-    <>
+    <div className={pause === true ? "screen-pause":"" }>
       <BorderTopHome />
       <div
         className="counter-container"
-        style={{ textAlign: 'center', margin: '1rem 0' }}
       >
         <h1 style={{ margin: '0' }}>{timeleft}</h1>
         <progress className="counter" max={MAX_DURATION} value={timeleft} />
@@ -145,8 +144,11 @@ function QuestionPoivron() {
         <button className="check-result-button" onClick={checkResult}>
           Valider
         </button>
+        </div>
+        <div>
+        <button type="button" className="" onClick={() => setPause(pause == false ? true : false) } > pause </button>
       </div>
-    </>
+    </div>
   );
 }
 

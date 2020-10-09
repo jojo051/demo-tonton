@@ -74,3 +74,14 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
+.screen-pause{
+  
+  background-color: tomato;
+  z-index: 1;
+}
+
+.counter-container{
+  text-align: center;
+  margin: 1rem ;
+}
