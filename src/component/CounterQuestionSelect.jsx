@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import './Counter.css';
 
 function CounterQuestionSelect() {
-  const MAX_DURATION = 60;
+  const MAX_DURATION = 80;
   const [timeleft, setTimeleft] = useState(MAX_DURATION);
   const history = useHistory();
 
@@ -12,7 +12,7 @@ function CounterQuestionSelect() {
     if (timeleft > 0) {
       setTimeout(() => setTimeleft(timeleft - 1), 1000);
     } else {
-      history.push('/2');
+      history.push('/3');
     }
   }, [timeleft, history]);
   return (

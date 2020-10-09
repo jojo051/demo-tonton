@@ -6,12 +6,22 @@
 .seclect-container {
   background-image: url("../img/champagneArdennecarte.png");
   height: 500px;
-  margin-left: -100px;
+  margin-left: -6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .question-select-title {
   text-align: center;
   font-family: 'Sakra';
+  background-color: #00a19a;
+  font-size: 1.5rem;
+  color: white;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0 1.5rem 1.5rem;
 }
 
 .question-select-question{
@@ -21,24 +31,47 @@
 }
 
 .container1{
-  margin-left: 130px;
-  padding-top: 70px;
-  
+  margin-left: 8rem; 
+  background-color: #00a19a;
+  color: white;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 8rem;
 }
 
 .container2{
-  margin-left: 130px;
-  padding-top: 110px;
+  margin-left: 8rem; 
+  margin-top: 5rem;
+  background-color: #00a19a;
+  color: white;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 8rem;
 }
 
+
 .container3{
-  margin-left: 130px;
-  padding-top: 80px;
+  margin-left: 9rem; 
+  margin-top: 5rem;
+  background-color: #00a19a;
+  color: white;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 8rem;
 }
 
 .container4{
-  margin-left: 150px;
-  padding-top: 50px;
+  margin-left: 19rem;
+  margin-top: 0rem;
+  background-color: #00a19a;
+  color: white;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 8rem;
 }
 
 .question-select-button{
@@ -55,4 +88,12 @@
 .question-select-button-container{
   display: flex;
   justify-content: center;
+}
+
+.select1 {
+  background-color: #00a19a;
+  color: white;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  text-align: center;
 }

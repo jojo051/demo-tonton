@@ -9,7 +9,7 @@ function QuestionPhrase() {
   const [bool, setBool] = useState(false);
   const [words, setWords] = useState(['constituants', 'transformation']);
 
-  const MAX_DURATION = 30;
+  const MAX_DURATION = 90;
   const [timeleft, setTimeleft] = useState(MAX_DURATION);
   const history = useHistory();
 

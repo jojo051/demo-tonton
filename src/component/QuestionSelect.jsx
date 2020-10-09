@@ -43,14 +43,14 @@ const QuestionSelect =()=> {
       <BorderTopHome />
       <CounterQuestionSelect />
 
-      <h2 className="question-select-title">Hello from Question Select</h2>
+      <h1 className="question-select-title">Metre les departements aux bons endrois</h1>
 
-      <p className="question-select-question">Metre les departements aux bons endrois</p>
       <div className="seclect-container"> 
         <div className="container1">
-          <label htmlFor="region-select-ar" clasName="question-label1">Quelle est cette region:</label>
+          <label htmlFor="region-select-ar" clasName="question-label1">Quel est ce departement:</label>
+          <br></br>
           <select 
-            clasName=""
+            clasName="select1"
             value={regionAr}
             name="region-ar" 
             id="region-ar"
@@ -63,9 +63,10 @@ const QuestionSelect =()=> {
           </select> 
         </div>
         <div className="container2">
-          <label htmlFor="region-select-ma" clasName="question-label2">Quelle est cette region:</label>
+          <label htmlFor="region-select-ma" clasName="question-label2">Quel est ce departement:</label>
+          <br></br>
           <select 
-            clasName=""
+            clasName="select1"
             value={regionMa}
             name="region-marne" 
             id="region-marne"
@@ -78,9 +79,10 @@ const QuestionSelect =()=> {
           </select>
         </div> 
         <div className="container3">
-          <label htmlFor="region-select-au" clasName="question-label3">Quelle est cette region:</label>
+          <label htmlFor="region-select-au" clasName="question-label3">Quel est ce departement:</label>
+          <br></br>
           <select 
-            clasName=""
+            clasName="select1"
             value={regionAu}
             name="region-aube" 
             id="region-aube"
@@ -93,9 +95,10 @@ const QuestionSelect =()=> {
           </select>
         </div>
         <div className="container4">
-          <label htmlFor="region-select-ha" clasName="question-label4">Quelle est cette region:</label>
+          <label htmlFor="region-select-ha" clasName="question-label4">Quel est ce departement:</label>
+          <br></br>
           <select 
-            clasName=""
+            clasName="select1"
             value={regionHa}
             name="region-haut" 
             id="region-haut"
